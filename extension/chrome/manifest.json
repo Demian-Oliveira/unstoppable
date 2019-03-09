@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Unstoppable",
+  "description": "Prevents pop-up layers from freezing your scroll bar and stops your browsing",
+  "version": "0.10",
+  "author": "Demian Oliveira",
+
+  "browser_action": {
+    "default_icon": "unstoppable_128.png",
+    "default_title": "Don't stop me now"
+  },
+
+  "icons": { 
+    "16": "unstoppable_16.png",
+    "32": "unstoppable_32.png",
+    "48": "unstoppable_48.png",
+    "64": "unstoppable_64.png",
+    "128": "unstoppable_128.png" 
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery-2.2.0.min.js", "unstoppable.js"]
+    }
+  ]
+}
