@@ -1,7 +1,7 @@
 // console.log("comecando");
 var observer = new MutationObserver(function(mutations) {
   mutations.forEach(function(mutation) {
-    if (mutation.attributeName === "class") {
+    if (mutation.attributeName === "class" || mutation.attributeName === "style") {
 		$cmp = $(mutation.target)
 		// console.log("tagName: ", $cmp.prop("tagName"), " | overflow: ", $cmp.css('overflow'));
 		if($cmp.css('overflow') == 'hidden') {
